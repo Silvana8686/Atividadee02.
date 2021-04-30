@@ -3,9 +3,9 @@ package Model;
 
 public class Professor extends Pessoa{
     
-public static double SALARIOBRUTOPROF = 3.000;
-public static double INSS = 0.12;
-public static double IR = 0.15;
+public static final double SALARIOBRUTOPROF = 3.000;
+public static final double INSS = 0.12;
+public static  final double IR = 0.15;
 
 
 public double salario;
@@ -41,7 +41,7 @@ public Professor (String nome, String endereco,String cpf, String telefone,doubl
         this.salario = salario;
     }
 
-     public  static double calcSalario ( double salario){
+     public  static final double calcSalario ( double salario){
      double desconto; double desconto2;
      desconto  =   SALARIOBRUTOPROF  *    INSS ;
      salario   =   SALARIOBRUTOPROF  -   desconto;
@@ -56,11 +56,11 @@ public Professor (String nome, String endereco,String cpf, String telefone,doubl
      }
          
     @Override
-    public double tirarCopia(double copia){
+    public double  tirarCopia(double copia){
       
          
-         double x = 0.05;
-         copia = x;
+         double x = 0.50;
+         copia = x -0.45;
       
          System.out.format("Valor da cópia para Professor\n%.2f\n",copia);
 
@@ -68,19 +68,22 @@ public Professor (String nome, String endereco,String cpf, String telefone,doubl
     }  
     
     
-    
-    public String Curso (String curso){
-    return curso;
-    
-    }
-    
-    
-    
-     public void DadosProf(){
-          
-       System.out.println("\nNome do Aluno:\n"+this.nome+"\nEndereco:"+this.endereco+"\nCPF:\n"+this.getCpf()+"\nTelefone:\n"+this.telefone+"\nCurso:"+this.curso);
+   
+    public void DadosProf(){
+   
+   
+       System.out.println("\nNome do Professor:\n"+this.nome+"\nEndereco:"+this.endereco+"\nCPF:\n"+this.getCpf()+"\nTelefone:\n"+this.telefone);
  
   }
+    
+    
+
+public String toString(){
+    return curso+"";
+
+
+    }
+    
 }
 
 

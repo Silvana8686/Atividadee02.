@@ -1,9 +1,10 @@
 
 package Model;
 
-public class Pessoa {   
-public String nome,endereco,telefone;
-private String cpf;
+public  class Pessoa {   
+public  String nome,endereco,telefone;
+private  String cpf;
+
 
 public Pessoa(){
 }
@@ -26,9 +27,15 @@ public Pessoa(){
     
     public double tirarCopia(double copia){
       
-         double x = 0.00;
+         double x = 0.50;
          copia = x;
          System.out.println("Valor da cópia");
          return copia ;
      }
+    
+   
+    
 }
+
+
+

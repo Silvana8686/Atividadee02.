@@ -1,7 +1,7 @@
 
 package Model;
 
-public class Aluno extends Pessoa{
+public  class Aluno extends Pessoa{
     
 public double nota1;
 public double nota2;
@@ -61,14 +61,16 @@ public Aluno (String nome, String endereco, String cpf, String telefone, double 
     
     public double tirarCopia(double copia){
       
-      double x = 0.10;
-      copia = x;
-      System.out.format("Valor da cópia%.2f\n",copia);
+      double x =  0.50;
+      copia = x - 0.40;
+      System.out.format("Valor da cópia Aluno %.2f\n",copia);
 
          return copia ;
      }
    
-    public void DadosAluno(){
+   public void DadosAluno(){
+    
+
           
       System.out.println("\nNome do Aluno:\n"+this.nome+"\nEndereco:"+this.endereco+"\nCPF:\n"+this.getCpf()+"\nTelefone:\n"+this.telefone);
          
